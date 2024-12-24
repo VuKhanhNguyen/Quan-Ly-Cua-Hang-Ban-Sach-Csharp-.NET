@@ -1,0 +1,297 @@
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\QuanLyCuaHangBanSach.dll.config
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\QuanLyCuaHangBanSach.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\QuanLyCuaHangBanSach.pdb
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\csc.exe
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\csc.exe.config
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\csc.rsp
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\csi.exe
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\csi.exe.config
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\csi.rsp
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.Managed.Core.targets
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.AppContext.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Collections.Immutable.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Console.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Globalization.Calendars.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.IO.Compression.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.IO.FileSystem.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Net.Http.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Net.Sockets.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Reflection.Metadata.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.ValueTuple.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Xml.XmlDocument.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Xml.XPath.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\vbc.exe
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\vbc.exe.config
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\vbc.rsp
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\VBCSCompiler.exe
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\roslyn\VBCSCompiler.exe.config
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\Antlr3.Runtime.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\Microsoft.Web.Infrastructure.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\Newtonsoft.Json.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.Helpers.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.Mvc.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.Optimization.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.Razor.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.WebPages.Deployment.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.WebPages.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.WebPages.Razor.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\WebGrease.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.Helpers.xml
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.Mvc.xml
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.Optimization.xml
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.Razor.xml
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.WebPages.xml
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.WebPages.Deployment.xml
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\System.Web.WebPages.Razor.xml
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\Newtonsoft.Json.xml
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\Antlr3.Runtime.pdb
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\obj\Debug\QuanLyCuaHangBanSach.csproj.AssemblyReference.cache
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\obj\Debug\QuanLyCuaHangBanSach.csproj.CoreCompileInputs.cache
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\obj\Debug\QuanLyCu.5D171C55.Up2Date
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\obj\Debug\QuanLyCuaHangBanSach.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\obj\Debug\QuanLyCuaHangBanSach.pdb
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\EntityFramework.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\EntityFramework.SqlServer.dll
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\EntityFramework.xml
+D:\BTHuongDoiTuong\QuanLyCuaHangBanSach\bin\EntityFramework.SqlServer.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\QuanLyCuaHangBanSach.dll.config
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\QuanLyCuaHangBanSach.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\QuanLyCuaHangBanSach.pdb
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\csc.exe
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\csc.exe.config
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\csc.rsp
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\csi.exe
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\csi.exe.config
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\csi.rsp
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CSharp.Core.targets
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.Managed.Core.targets
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.VisualBasic.Core.targets
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.Win32.Primitives.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.AppContext.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Collections.Immutable.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Console.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Diagnostics.StackTrace.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Globalization.Calendars.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.IO.Compression.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.IO.Compression.ZipFile.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.IO.FileSystem.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.IO.FileSystem.Primitives.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Net.Http.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Net.Sockets.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Reflection.Metadata.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Security.Cryptography.Encoding.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Security.Cryptography.Primitives.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Text.Encoding.CodePages.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Threading.Tasks.Extensions.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.ValueTuple.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Xml.ReaderWriter.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Xml.XmlDocument.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Xml.XPath.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Xml.XPath.XDocument.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\vbc.exe
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\vbc.exe.config
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\vbc.rsp
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\VBCSCompiler.exe
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\VBCSCompiler.exe.config
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Antlr3.Runtime.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\EntityFramework.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\EntityFramework.SqlServer.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Microsoft.Web.Infrastructure.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Newtonsoft.Json.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Helpers.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Mvc.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Optimization.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Razor.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.WebPages.Deployment.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.WebPages.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.WebPages.Razor.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\WebGrease.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\EntityFramework.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\EntityFramework.SqlServer.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Helpers.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Mvc.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Optimization.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Razor.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.WebPages.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.WebPages.Deployment.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.WebPages.Razor.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Newtonsoft.Json.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Antlr3.Runtime.pdb
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\obj\Debug\QuanLyCuaHangBanSach.csproj.AssemblyReference.cache
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\obj\Debug\QuanLyCuaHangBanSach.csproj.CoreCompileInputs.cache
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\obj\Debug\QuanLyCu.5D171C55.Up2Date
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\obj\Debug\QuanLyCuaHangBanSach.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\obj\Debug\QuanLyCuaHangBanSach.pdb
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\BouncyCastle.Cryptography.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MailKit.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MimeKit.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Buffers.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Formats.Asn1.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Memory.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Numerics.Vectors.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Runtime.CompilerServices.Unsafe.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Threading.Tasks.Extensions.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.ValueTuple.dll
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\BouncyCastle.Cryptography.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MailKit.pdb
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MailKit.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MailKit.dll.config
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MimeKit.pdb
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MimeKit.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MimeKit.dll.config
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Buffers.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Formats.Asn1.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Memory.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Numerics.Vectors.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Runtime.CompilerServices.Unsafe.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Threading.Tasks.Extensions.xml
+K:\Visual Studio 2022\C#_project\final\one\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.ValueTuple.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\QuanLyCuaHangBanSach.dll.config
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\QuanLyCuaHangBanSach.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\QuanLyCuaHangBanSach.pdb
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\csc.exe
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\csc.exe.config
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\csc.rsp
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\csi.exe
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\csi.exe.config
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\csi.rsp
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.CSharp.Core.targets
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.Managed.Core.targets
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.VisualBasic.Core.targets
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\Microsoft.Win32.Primitives.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.AppContext.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Collections.Immutable.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Console.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Diagnostics.StackTrace.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Globalization.Calendars.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.IO.Compression.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.IO.Compression.ZipFile.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.IO.FileSystem.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.IO.FileSystem.Primitives.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Net.Http.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Net.Sockets.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Reflection.Metadata.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Security.Cryptography.Encoding.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Security.Cryptography.Primitives.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Text.Encoding.CodePages.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Threading.Tasks.Extensions.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.ValueTuple.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Xml.ReaderWriter.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Xml.XmlDocument.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Xml.XPath.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\System.Xml.XPath.XDocument.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\vbc.exe
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\vbc.exe.config
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\vbc.rsp
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\VBCSCompiler.exe
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\roslyn\VBCSCompiler.exe.config
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Antlr3.Runtime.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\BouncyCastle.Cryptography.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\EntityFramework.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\EntityFramework.SqlServer.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MailKit.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Microsoft.Web.Infrastructure.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MimeKit.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Newtonsoft.Json.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Buffers.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Formats.Asn1.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Memory.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Numerics.Vectors.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Runtime.CompilerServices.Unsafe.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Threading.Tasks.Extensions.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.ValueTuple.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Helpers.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Mvc.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Optimization.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Razor.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.WebPages.Deployment.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.WebPages.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.WebPages.Razor.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\WebGrease.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\BouncyCastle.Cryptography.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\EntityFramework.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\EntityFramework.SqlServer.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MailKit.pdb
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MailKit.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MailKit.dll.config
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MimeKit.pdb
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MimeKit.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\MimeKit.dll.config
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Buffers.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Formats.Asn1.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Memory.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Numerics.Vectors.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Runtime.CompilerServices.Unsafe.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Threading.Tasks.Extensions.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.ValueTuple.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Helpers.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Mvc.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Optimization.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.Razor.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.WebPages.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.WebPages.Deployment.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\System.Web.WebPages.Razor.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Newtonsoft.Json.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Antlr3.Runtime.pdb
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\obj\Debug\QuanLyCuaHangBanSach.csproj.AssemblyReference.cache
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\obj\Debug\QuanLyCuaHangBanSach.csproj.CoreCompileInputs.cache
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\obj\Debug\QuanLyCu.5D171C55.Up2Date
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\obj\Debug\QuanLyCuaHangBanSach.dll
+K:\ProjectGitHub\WebQuanLyCuaHangBanSach\QuanLyCuaHangBanSach\QuanLyCuaHangBanSach\obj\Debug\QuanLyCuaHangBanSach.pdb

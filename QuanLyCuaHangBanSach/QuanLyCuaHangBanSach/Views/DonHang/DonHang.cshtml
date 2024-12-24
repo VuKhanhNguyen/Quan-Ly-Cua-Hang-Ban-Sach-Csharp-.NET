@@ -1,0 +1,299 @@
+﻿@using QuanLyCuaHangBanSach.Models
+@{
+    ViewBag.Title = "DonHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+    if (Session["UserID"] == null)
+    {
+        Response.Redirect("~/DangNhapDangKy/DangNhapDangKy");
+    }
+
+    int userId = (int)Session["UserID"];
+    var db = new QuanLyBanSachEntities(); // Thay bằng context của bạn
+    var gioHang = db.GIOHANGs.Where(g => g.IDKhachHang == userId).ToList();
+    var user = db.KHACHHANGs.FirstOrDefault(u => u.IDKhachHang == userId);
+    //var donHang = ViewBag.DonHang as DONHANG;
+    if (user == null)
+    {
+        Response.Redirect("~/DangNhapDangKy/DangNhapDangKy");
+    }
+
+}
+@{
+    decimal tongTien = 0;
+    if (Model is IEnumerable<QuanLyCuaHangBanSach.Models.GIOHANG>) // Kiểm tra kiểu của Model
+    {
+        var gioHangList = Model as IEnumerable<QuanLyCuaHangBanSach.Models.GIOHANG>;
+        tongTien = gioHangList.Sum(item => Convert.ToDecimal(item.SACH.GiaBan ?? 0) * Convert.ToDecimal(item.SoLuongDat));
+    }
+}
+
+
+
+
+
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Thủ tục thanh toán</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="#">Trang</a></li>
+        <li class="breadcrumb-item active text-white">Thủ tục thanh toán</li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+<!-- Checkout Page Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <h1 class="mb-4">Chi tiết thanh toán</h1>
+        <form action="#">
+            <div class="row g-5">
+                <div class="col-md-12 col-lg-6 col-xl-7">
+                    <div class="form-item">
+                        <label class="form-label my-3">Họ và tên<sup>*</sup></label>
+                        <input type="text" class="form-control" value="@user.HoTen" readonly>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Địa chỉ<sup>*</sup></label>
+                        <input type="text" class="form-control" value="@user.DiaChi" readonly>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Điện thoại<sup>*</sup></label>
+                        <input type="tel" class="form-control" value="@user.SoDienThoai" readonly>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Email<sup>*</sup></label>
+                        <input type="email" class="form-control" value="@user.Email" readonly>
+                    </div>
+                    <div class="form-check my-3">
+                        <input type="checkbox" class="form-check-input" id="Account-1" name="Accounts" value="Accounts">
+                        <label class="form-check-label" for="Account-1">Tạo tài khoản mới?</label>
+                    </div>
+                    <hr>
+                    <div class="form-check my-3">
+                        <input class="form-check-input" type="checkbox" id="Address-1" name="Address" value="Address">
+                        <label class="form-check-label" for="Address-1">Gửi đến địa chỉ khác?</label>
+                    </div>
+                    <div class="form-item">
+                        <textarea name="text" class="form-control" spellcheck="false" cols="30" rows="11" placeholder="Ghi chú"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6 col-xl-5">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Sản Phẩm</th>
+                                    <th scope="col">Tên </th>
+                                    <th scope="col">Giá</th>
+                                    <th scope="col">Số lượng</th>
+                                    <th scope="col">Tổng cộng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            <img src="@item.SACH.AnhSach" style="width: 100px; height: 100px;" />
+                                        </td>
+                                        <td>@item.SACH.TenSach</td>
+                                        <td>@item.SACH.GiaBan.ToString("N0") đồng</td>
+                                        <td>@item.SoLuongDat</td>
+                                        <td>@Convert.ToDecimal(item.SACH.GiaBan * item.SoLuongDat).ToString("N0") đ</td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <td colspan="4" class="text-right"><strong>Tổng tiền:</strong></td>
+                                    <td><strong>@ViewBag.TongTien.ToString("N0") đồng</strong></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    </th>
+                                    <td class="py-5"></td>
+                                    <td class="py-5"></td>
+                                    <td class="py-5">
+                                        <p class="mb-0 text-dark py-3">Ngày đặt hàng </p>
+                                    </td>
+                                    <td class="py-5">
+                                        <div class="py-3 border-bottom border-top">
+                                            <p class="mb-0 text-dark">
+                                                @ViewBag.NgayHienTai
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    </th>
+                                    <td class="py-5">
+                                        <p class="mb-0 text-dark py-4">Shipping</p>
+                                    </td>
+                                    <td colspan="3" class="py-5">
+                                        <div class="form-check text-start">
+                                            <input type="checkbox" class="form-check-input bg-primary border-0" id="ShippingFree" name="Shipping" value="FreeShipping">
+                                            <label class="form-check-label" for="ShippingFree">Giao hàng miễn phí</label>
+                                        </div>
+                                        <div class="form-check text-start">
+                                            <input type="checkbox" class="form-check-input bg-primary border-0" id="ShippingFixed" name="Shipping" value="FixedShipping">
+                                            <label class="form-check-label" for="ShippingFixed"> Giá cố định: 20.000</label>
+                                        </div>
+                                        <div class="form-check text-start">
+                                            <input type="checkbox" class="form-check-input bg-primary border-0" id="ShippingLocal" name="Shipping" value="LocalShipping">
+                                            <label class="form-check-label" for="ShippingLocal">Giá địa phương: 10.000</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    </th>
+                                    <td class="py-5">
+                                        <p class="mb-0 text-dark text-uppercase py-3">Tổng tiền </p>
+                                    </td>
+                                    <td class="py-5"></td>
+                                    <td class="py-5"></td>
+                                    <td class="py-5">
+                                        <div class="py-3 border-bottom border-top">
+                                            <p class="mb-0 text-dark" id="tongTienDisplay">@ViewBag.TongTien.ToString("N0")đ</p>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row g-4 text-center align-items-center justify-content-center border-bottom py-3">
+                        <div class="col-12">
+                            <div class="form-check text-start my-3">
+                                <input type="checkbox" class="form-check-input bg-primary border-0" id="Transfer-1" name="Transfer" value="Transfer">
+                                <label class="form-check-label" for="Transfer-1">Chuyển khoản trực tiếp</label>
+                            </div>
+                            <p class="text-start text-dark">Thực hiện thanh toán trực tiếp vào tài khoản ngân hàng của chúng tôi. Vui lòng sử dụng ID đơn hàng của bạn làm tài liệu tham khảo thanh toán. Đơn đặt hàng của bạn sẽ không được vận chuyển cho đến khi tiền đã được xóa trong tài khoản của chúng tôi</p>
+                        </div>
+                    </div>
+                    <div class="row g-4 text-center align-items-center justify-content-center border-bottom py-3">
+                        <div class="col-12">
+                            <div class="form-check text-start my-3">
+                                <input type="checkbox" class="form-check-input bg-primary border-0" id="Payments-1" name="Payments" value="Payments">
+                                <label class="form-check-label" for="Payments-1">Kiểm tra thanh toán</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 text-center align-items-center justify-content-center border-bottom py-3">
+                        <div class="col-12">
+                            <div class="form-check text-start my-3">
+                                <input type="checkbox" class="form-check-input bg-primary border-0" id="Delivery-1" name="Delivery" value="Delivery">
+                                <label class="form-check-label" for="Delivery-1">Thanh toán khi giao hàng</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 text-center align-items-center justify-content-center border-bottom py-3">
+                        <div class="col-12">
+                            <div class="form-check text-start my-3">
+                                <input type="checkbox" class="form-check-input bg-primary border-0" id="Paypal-1" name="Paypal" value="Paypal">
+                                <label class="form-check-label" for="Paypal-1">Thanh toán</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                        <button type="button" id="btnDatHang" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Đặt hàng</button>
+                        @*<a href="/HoaDon/HoaDon" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Đặt hàng</a>*@
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Checkout Page End -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Lấy tổng tiền ban đầu từ ViewBag.TongTien
+        let tongTien = @ViewBag.TongTien;
+        let shippingCost = 0;  // Biến phụ lưu trữ phí vận chuyển
+
+        // Hàm tính toán và cập nhật tổng tiền
+        function updateTotalPrice() {
+            // Reset phí vận chuyển
+            shippingCost = 0;
+
+            // Cộng phí giao hàng nếu checkbox được chọn
+            if ($('#ShippingFixed').prop('checked')) {
+                shippingCost += 20000;  // Giá cố định
+            }
+            if ($('#ShippingLocal').prop('checked')) {
+                shippingCost += 10000;  // Giá địa phương
+            }
+
+            // Cập nhật tổng tiền
+            let newTotal = tongTien + shippingCost;
+
+            // Cập nhật giá trị tổng tiền vào phần tử hiển thị
+            $('#tongTienDisplay').text(newTotal.toLocaleString() + "đ");
+        }
+
+        // Theo dõi sự thay đổi của các checkbox và cập nhật lại tổng tiền
+        $('input[name="Shipping"]').on('change', function() {
+            updateTotalPrice();
+        });
+
+        // Gọi hàm ngay khi trang tải
+        updateTotalPrice();
+    });
+</script>
+
+@*<script>
+    $(document).ready(function() {
+        $('#btnDatHang').click(function() {
+            // Lấy thông tin giỏ hàng từ ViewBag và mã hóa thành JSON
+            let gioHang = @Html.Raw(Json.Encode(ViewBag.GioHangList)); // Giỏ hàng từ ViewBag
+
+$.ajax({
+    url: '@Url.Action("DatHang", "DonHang")',
+    type: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify({ gioHang: gioHang }), // Gửi giỏ hàng dưới dạng JSON
+    success: function(response) {
+        if (response.success) {
+            alert('Đặt hàng thành công!');
+            window.location.href = '@Url.Action("DonHang", "DonHang")';
+        } else {
+            alert('Có lỗi xảy ra khi đặt hàng. Vui lòng thử lại!');
+        }
+    },
+    error: function() {
+        alert('Đã có lỗi xảy ra.');
+    }
+});
+
+            });
+        });
+    
+</script>*@
+
+<script>
+    $(document).ready(function() {
+        $('#btnDatHang').click(function() {
+            $.ajax({
+                url: '@Url.Action("DatHang", "DonHang")',
+                type: 'POST',
+                success: function(response) {
+                    if (response.success) {
+                        // Hiển thị thông báo đặt hàng thành công
+                        alert('Đặt hàng thành công!');
+
+                        // Chuyển hướng đến trang đơn hàng hoặc trang khác
+                        window.location.href = '@Url.Action("Index", "Home")'; // Thay đổi điểm đến tùy ý
+                    } else {
+                        // Hiển thị thông báo lỗi nếu có
+                        alert('Đặt hàng không thành công: ' + response.message);
+                    }
+                },
+                error: function() {
+                    alert('Có lỗi xảy ra. Vui lòng thử lại.');
+                }
+            });
+        });
+    });
+</script>

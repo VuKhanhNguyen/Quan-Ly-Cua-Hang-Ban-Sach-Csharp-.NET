@@ -1,0 +1,55 @@
+﻿body {
+    background-image: url(https://drsw10gc90t0z.cloudfront.net/AcuCustom/Sitename/DAM/483/Housmans_Bookshop.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        filter: blur(8px);
+        z-index: -1;
+    }
+
+.container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-edit {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .btn-edit:hover {
+        background-color: #0056b3;
+    }
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}

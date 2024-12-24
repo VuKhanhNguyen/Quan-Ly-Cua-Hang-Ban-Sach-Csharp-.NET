@@ -1,0 +1,36 @@
+﻿@model QuanLyCuaHangBanSach.Models.KHACHHANG
+@{
+    ViewBag.Title = "User";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin người dùng</title>
+    <link rel="stylesheet" href="~/css/user.css">
+    <link rel="stylesheet" href="~/css/edit_user.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body style="background-image: url(https://drsw10gc90t0z.cloudfront.net/AcuCustom/Sitename/DAM/483/Housmans_Bookshop.jpg);">
+    <section>
+        <div class="container">
+            <div class="avatar">
+                <img src="https://pbs.twimg.com/profile_images/1586101139564544008/pBs-giTK_400x400.jpg" alt="Avatar">
+            </div>
+            <h1>Thông tin người dùng</h1>
+            <div class="user-info">
+                <p><label>Họ và tên: </label>@ViewBag.UserName</p><br>
+                <p><label>Email: </label>@ViewBag.Email</p><br>
+                <p><label>Số điện thoại: </label>@ViewBag.Phone</p><br>
+                <p><label>Địa chỉ: </label>@ViewBag.Address</p><br>
+            </div>
+            <button type="button" class="btn-edit" onclick="window.location.href='@Url.Action("ChinhSuaThongTin", "ChinhSuaThongTin")'">Chỉnh Sửa Thông Tin</button>
+            <button type="button" class="btn-edit" onclick="window.location.href='@Url.Action("DangXuat", "User")'">Đăng Xuất</button>
+        </div>
+    </section>
+</body>
+</html>

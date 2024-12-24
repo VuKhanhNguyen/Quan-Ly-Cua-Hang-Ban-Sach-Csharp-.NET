@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyBanSachModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="IDKhachHang" />
+    </Key>
+    <Property Name="IDKhachHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="GIOHANGs" Relationship="QuanLyBanSachModel.FK__GIOHANG__IDKhach__5CD6CB2B" FromRole="KHACHHANG" ToRole="GIOHANG" />
+    <NavigationProperty Name="DONHANGs" Relationship="QuanLyBanSachModel.FK__DONHANG__IDKhach__76969D2E" FromRole="KHACHHANG" ToRole="DONHANG" />
+  </EntityType>
+  <EntityType Name="SACH">
+    <Key>
+      <PropertyRef Name="IDSach" />
+    </Key>
+    <Property Name="IDSach" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenSach" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TacGia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IDTheLoai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NhaXuatBan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NamXuatBan" Type="Int32" />
+    <Property Name="GiaNhap" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="GiaBan" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SoLuongTon" Type="Int32" />
+    <Property Name="AnhSach" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="THELOAI" Relationship="Self.FK__SACH__IDTheLoai__398D8EEE" FromRole="SACH" ToRole="THELOAI" />
+    <NavigationProperty Name="GIOHANGs" Relationship="QuanLyBanSachModel.FK__GIOHANG__IDSach__5DCAEF64" FromRole="SACH" ToRole="GIOHANG" />
+    <NavigationProperty Name="CHITIETDONHANGs" Relationship="QuanLyBanSachModel.FK__CHITIETDO__IDSac__7A672E12" FromRole="SACH" ToRole="CHITIETDONHANG" />
+  </EntityType>
+  <EntityType Name="THELOAI">
+    <Key>
+      <PropertyRef Name="IDTheLoai" />
+    </Key>
+    <Property Name="IDTheLoai" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenTheLoai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SACHes" Relationship="Self.FK__SACH__IDTheLoai__398D8EEE" FromRole="THELOAI" ToRole="SACH" />
+  </EntityType>
+  <Association Name="FK__SACH__IDTheLoai__398D8EEE">
+    <End Role="THELOAI" Type="Self.THELOAI" Multiplicity="0..1" />
+    <End Role="SACH" Type="Self.SACH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THELOAI">
+        <PropertyRef Name="IDTheLoai" />
+      </Principal>
+      <Dependent Role="SACH">
+        <PropertyRef Name="IDTheLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyBanSachEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="KHACHHANGs" EntityType="Self.KHACHHANG" />
+    <EntitySet Name="SACHes" EntityType="Self.SACH" />
+    <EntitySet Name="THELOAIs" EntityType="Self.THELOAI" />
+    <AssociationSet Name="FK__SACH__IDTheLoai__398D8EEE" Association="Self.FK__SACH__IDTheLoai__398D8EEE">
+      <End Role="THELOAI" EntitySet="THELOAIs" />
+      <End Role="SACH" EntitySet="SACHes" />
+    </AssociationSet>
+    <EntitySet Name="GIOHANGs" EntityType="QuanLyBanSachModel.GIOHANG" />
+    <AssociationSet Name="FK__GIOHANG__IDKhach__5CD6CB2B" Association="QuanLyBanSachModel.FK__GIOHANG__IDKhach__5CD6CB2B">
+      <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+      <End Role="GIOHANG" EntitySet="GIOHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GIOHANG__IDSach__5DCAEF64" Association="QuanLyBanSachModel.FK__GIOHANG__IDSach__5DCAEF64">
+      <End Role="SACH" EntitySet="SACHes" />
+      <End Role="GIOHANG" EntitySet="GIOHANGs" />
+    </AssociationSet>
+    <EntitySet Name="CHITIETDONHANGs" EntityType="QuanLyBanSachModel.CHITIETDONHANG" />
+    <EntitySet Name="DONHANGs" EntityType="QuanLyBanSachModel.DONHANG" />
+    <AssociationSet Name="FK__CHITIETDO__IDDon__797309D9" Association="QuanLyBanSachModel.FK__CHITIETDO__IDDon__797309D9">
+      <End Role="DONHANG" EntitySet="DONHANGs" />
+      <End Role="CHITIETDONHANG" EntitySet="CHITIETDONHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CHITIETDO__IDSac__7A672E12" Association="QuanLyBanSachModel.FK__CHITIETDO__IDSac__7A672E12">
+      <End Role="SACH" EntitySet="SACHes" />
+      <End Role="CHITIETDONHANG" EntitySet="CHITIETDONHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DONHANG__IDKhach__76969D2E" Association="QuanLyBanSachModel.FK__DONHANG__IDKhach__76969D2E">
+      <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+      <End Role="DONHANG" EntitySet="DONHANGs" />
+    </AssociationSet>
+    <EntitySet Name="vw_DonHangChiTiet" EntityType="QuanLyBanSachModel.vw_DonHangChiTiet" />
+  </EntityContainer>
+  <EntityType Name="GIOHANG">
+    <Key>
+      <PropertyRef Name="IDGioHang" />
+    </Key>
+    <Property Name="IDGioHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDKhachHang" Type="Int32" />
+    <Property Name="IDSach" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SoLuongDat" Type="Int32" />
+    <NavigationProperty Name="KHACHHANG" Relationship="QuanLyBanSachModel.FK__GIOHANG__IDKhach__5CD6CB2B" FromRole="GIOHANG" ToRole="KHACHHANG" />
+    <NavigationProperty Name="SACH" Relationship="QuanLyBanSachModel.FK__GIOHANG__IDSach__5DCAEF64" FromRole="GIOHANG" ToRole="SACH" />
+  </EntityType>
+  <Association Name="FK__GIOHANG__IDKhach__5CD6CB2B">
+    <End Type="QuanLyBanSachModel.KHACHHANG" Role="KHACHHANG" Multiplicity="0..1" />
+    <End Type="QuanLyBanSachModel.GIOHANG" Role="GIOHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="IDKhachHang" />
+      </Principal>
+      <Dependent Role="GIOHANG">
+        <PropertyRef Name="IDKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GIOHANG__IDSach__5DCAEF64">
+    <End Type="QuanLyBanSachModel.SACH" Role="SACH" Multiplicity="0..1" />
+    <End Type="QuanLyBanSachModel.GIOHANG" Role="GIOHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SACH">
+        <PropertyRef Name="IDSach" />
+      </Principal>
+      <Dependent Role="GIOHANG">
+        <PropertyRef Name="IDSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CHITIETDONHANG">
+    <Key>
+      <PropertyRef Name="IDChiTiet" />
+    </Key>
+    <Property Name="IDChiTiet" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDDonHang" Type="Int32" />
+    <Property Name="IDSach" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="DONHANG" Relationship="QuanLyBanSachModel.FK__CHITIETDO__IDDon__797309D9" FromRole="CHITIETDONHANG" ToRole="DONHANG" />
+    <NavigationProperty Name="SACH" Relationship="QuanLyBanSachModel.FK__CHITIETDO__IDSac__7A672E12" FromRole="CHITIETDONHANG" ToRole="SACH" />
+  </EntityType>
+  <EntityType Name="DONHANG">
+    <Key>
+      <PropertyRef Name="IDDonHang" />
+    </Key>
+    <Property Name="IDDonHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDKhachHang" Type="Int32" />
+    <Property Name="NgayDatHang" Type="DateTime" Precision="3" />
+    <Property Name="TongTien" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TrangThai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CHITIETDONHANGs" Relationship="QuanLyBanSachModel.FK__CHITIETDO__IDDon__797309D9" FromRole="DONHANG" ToRole="CHITIETDONHANG" />
+    <NavigationProperty Name="KHACHHANG" Relationship="QuanLyBanSachModel.FK__DONHANG__IDKhach__76969D2E" FromRole="DONHANG" ToRole="KHACHHANG" />
+  </EntityType>
+  <Association Name="FK__CHITIETDO__IDDon__797309D9">
+    <End Type="QuanLyBanSachModel.DONHANG" Role="DONHANG" Multiplicity="0..1" />
+    <End Type="QuanLyBanSachModel.CHITIETDONHANG" Role="CHITIETDONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DONHANG">
+        <PropertyRef Name="IDDonHang" />
+      </Principal>
+      <Dependent Role="CHITIETDONHANG">
+        <PropertyRef Name="IDDonHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CHITIETDO__IDSac__7A672E12">
+    <End Type="QuanLyBanSachModel.SACH" Role="SACH" Multiplicity="0..1" />
+    <End Type="QuanLyBanSachModel.CHITIETDONHANG" Role="CHITIETDONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SACH">
+        <PropertyRef Name="IDSach" />
+      </Principal>
+      <Dependent Role="CHITIETDONHANG">
+        <PropertyRef Name="IDSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DONHANG__IDKhach__76969D2E">
+    <End Type="QuanLyBanSachModel.KHACHHANG" Role="KHACHHANG" Multiplicity="0..1" />
+    <End Type="QuanLyBanSachModel.DONHANG" Role="DONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="IDKhachHang" />
+      </Principal>
+      <Dependent Role="DONHANG">
+        <PropertyRef Name="IDKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="vw_DonHangChiTiet">
+    <Key>
+      <PropertyRef Name="IDDonHang" />
+    </Key>
+    <Property Name="IDDonHang" Type="Int32" Nullable="false" />
+    <Property Name="IDKhachHang" Type="Int32" />
+    <Property Name="IDSach" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="NgayDatHang" Type="DateTime" Precision="3" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TongTien" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TrangThai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TenSach" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="GiaBan" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

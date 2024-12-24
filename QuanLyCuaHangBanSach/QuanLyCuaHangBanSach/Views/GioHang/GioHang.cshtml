@@ -1,0 +1,105 @@
+﻿@using System.Linq
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+@model List<QuanLyCuaHangBanSach.Models.GIOHANG>
+@*@model QuanLyCuaHangBanSach.Models.SACH*@
+@{
+    decimal tongTien = 0;
+    if (Model != null && Model.Any())
+    {
+        tongTien = Model.Sum(item =>
+            Convert.ToDecimal(item.SACH.GiaBan ?? 0) * Convert.ToDecimal(item.SoLuongDat));
+
+    }
+}
+
+
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Giỏ Thàng</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="#">Trang</a></li>
+        <li class="breadcrumb-item active text-white">Giỏ hàng</li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+<!-- Cart Page Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Sản phẩm</th>
+                        <th scope="col">Tên</th>
+                        <th scope="col">Giá</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Tổng</th>
+                        <th scope="col">Xử lý</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td><img src="@item.SACH.AnhSach" alt="Ảnh sách" style="width: 80px;" /></td>
+                                <td>@item.SACH.TenSach</td>
+                                <td>@Convert.ToDecimal(item.SACH.GiaBan).ToString("N0") đ</td>
+                                <td>@item.SoLuongDat</td>
+                                <td>@Convert.ToDecimal(item.SACH.GiaBan * item.SoLuongDat).ToString("N0") đ</td>
+                                <td>
+                                    <a href="/GioHang/XoaKhoiGioHang?IDSach=@item.IDSach" class="btn btn-danger">Xóa</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center">Giỏ hàng trống</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="mt-5">
+            <input type="text" class="border-0 border-bottom rounded me-5 py-3 mb-4" placeholder="Coupon Code">
+            <button class="btn border-secondary rounded-pill px-4 py-3 text-primary" type="button">Mã giảm giá</button>
+        </div>
+        <div class="row g-4 justify-content-end">
+            <div class="col-8"></div>
+            <div class="col-sm-8 col-md-7 col-lg-6 col-xl-4">
+                <div class="bg-light rounded">
+                    <div class="p-4">
+                        <h1 class="display-6 mb-4">Giỏ hàng <span class="fw-normal">Tổng tiền</span></h1>
+                        @*<div class="d-flex justify-content-between mb-4">
+                                <h5 class="mb-0 me-4">Tổng phụ:</h5>
+                                <p class="mb-0">200.000đ</p>
+                            </div>*@
+                        <div class="d-flex justify-content-between">
+                            <h5 class="mb-0 me-4">Đang vận chuyển</h5>
+                            <div class="">
+                                <p class="mb-0">Giá cố định: 20.000đ</p>
+                            </div>
+                        </div>
+                        <p class="mb-0 text-end">Vận chuyển đến Đà Nẵng</p>
+                    </div>
+                    <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
+                        <h5 class="mb-0 ps-4 me-4">Tổng tiền</h5>
+                        <p class="mb-0 pe-4">@tongTien.ToString("N0")đ</p>
+                    </div>
+                    <a href="/DonHang/DonHang" class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4">
+                        Thanh toán
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Cart Page End -->

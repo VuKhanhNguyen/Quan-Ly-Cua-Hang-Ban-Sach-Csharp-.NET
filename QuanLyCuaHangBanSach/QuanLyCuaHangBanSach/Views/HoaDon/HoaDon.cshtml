@@ -1,0 +1,132 @@
+﻿@using QuanLyCuaHangBanSach.Models
+@{
+    ViewBag.Title = "HoaDon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var userId = (int)Session["UserID"];
+    var db = new QuanLyBanSachEntities();
+    var gioHang = db.GIOHANGs.Where(g => g.IDKhachHang == userId).ToList();
+    decimal tongTien = gioHang.Sum(item => Convert.ToDecimal(item.SACH.GiaBan ?? 0) * Convert.ToDecimal(item.SoLuongDat));
+    var khachHang = db.KHACHHANGs.FirstOrDefault(k => k.IDKhachHang == userId);
+}
+<!-- Thông tin người dùng -->
+
+@using (Html.BeginForm("DatHang", "DonHang", FormMethod.Post))
+{
+    @* Ẩn các trường thông tin không cần thiết *@
+    <input type="hidden" name="userId" value="@userId" />
+    <input type="hidden" name="tongTien" value="@tongTien" />
+    <input type="hidden" name="gioHang" value="@string.Join(",", gioHang.Select(g => g.IDSach.ToString()).ToArray())" />
+
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Thông tin đơn hàng</h2>
+        <div class="row mb-4">
+            <div class="col-6">
+                <p><strong>Khách Hàng:</strong> @khachHang.HoTen</p>
+                <p><strong>Email:</strong> @khachHang.Email</p>
+                <p><strong>Số Điện Thoại:</strong> @khachHang.SoDienThoai</p>
+            </div>
+            <div class="col-6 text-right">
+                <p><strong>Ngày Đặt Hàng:</strong> @DateTime.Now.ToString("dd/MM/yyyy")</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Ảnh Sách</th>
+                            <th>Tên Sách</th>
+                            <th>Giá Sách</th>
+                            <th>Số Lượng</th>
+                            <th>Tổng Tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in gioHang)
+                        {
+                            <tr>
+                                <td><img src="@item.SACH.AnhSach" alt="Book Image" width="100"></td>
+                                <td>@item.SACH.TenSach</td>
+                                <td>@Convert.ToDecimal(item.SACH.GiaBan).ToString("N0") đ</td>
+                                <td>@item.SoLuongDat</td>
+                                <td>@(item.SACH.GiaBan * item.SoLuongDat).ToString("N0")đ</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <div class="text-right py-3">
+                    <strong>Tổng Tiền: @tongTien.ToString("N0")đ</strong>
+                </div>
+                <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                    <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- Thêm style CSS tùy chỉnh để làm đẹp hóa đơn -->
+<style>
+    .table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+        .table th, .table td {
+            padding: 15px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .table th {
+            background-color: #f8f9fa;
+        }
+
+    .thead-dark th {
+        background-color: #343a40;
+        color: #fff;
+    }
+
+    .container {
+        max-width: 900px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    .text-right {
+        text-align: right;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $("#btnDatHang").click(function () {
+            // Gửi yêu cầu Ajax đến server để xử lý đơn hàng
+            $.ajax({
+                url: '@Url.Action("DatHang", "DonHang")', // Action "DatHang" trong Controller "DonHang"
+                type: 'POST',
+                success: function (response) {
+                    // Hiển thị thông báo thành công
+                    if (response.success) {
+                        alert('Đặt hàng thành công!');
+                        // Có thể chuyển hướng người dùng hoặc làm gì đó sau khi đặt hàng
+                        window.location.href = '@Url.Action("HoaDon", "DonHang")'; // Chuyển tới trang hóa đơn
+                    } else {
+                        alert('Có lỗi xảy ra, vui lòng thử lại.');
+                    }
+                },
+                error: function () {
+                    alert('Có lỗi xảy ra khi gửi yêu cầu.');
+                }
+            });
+        });
+    });
+</script>

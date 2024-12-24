@@ -1,0 +1,179 @@
+﻿@model QuanLyCuaHangBanSach.Models.KHACHHANG
+
+@using (Html.BeginForm("SaveKH", "Quanly", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="card shadow" style="padding: 15px; margin-bottom: 20px;">
+        <div class="card-header bg-primary text-white">
+            <h5>Sửa Khách Hàng</h5>
+            <small class="text-white-50">Vui lòng điền thông tin cần thiết để thêm khách hàng mới</small>
+        </div>
+
+        <div class="card-header" style="text-align: center;">
+            <label>ID Khách Hàng: @Model.IDKhachHang</label>
+        </div>
+
+        @Html.HiddenFor(m => m.IDKhachHang)
+
+        <div class="card-body" style="font-size: 13px;">
+            <!-- Hiển thị lỗi chung -->
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger">
+                    <p>Vui lòng kiểm tra lại các thông tin sau:</p>
+                    <ul>
+                        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                        {
+                            <li>@error.ErrorMessage</li>
+                        }
+                    </ul>
+                </div>
+            }
+
+            <div class="row g-3">
+                <!-- Cột 1: Họ và Tên -->
+                <div class="col-md-6">
+                    <label for="HoTen">Họ và Tên <span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.HoTen, new { @class = "form-control", placeholder = "Nhập họ và tên khách hàng", required = "required" })
+                    @Html.ValidationMessageFor(m => m.HoTen, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Cột 2: Email -->
+                <div class="col-md-6">
+                    <label for="Email">Email <span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Nhập email", type = "email", required = "required" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <!-- Cột 1: Số Điện Thoại -->
+                <div class="col-md-6">
+                    <label for="SoDienThoai">Số Điện Thoại <span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.SoDienThoai, new { @class = "form-control", placeholder = "Nhập số điện thoại", pattern = @"\d{10}", required = "required" })
+                    @Html.ValidationMessageFor(m => m.SoDienThoai, "", new { @class = "text-danger" })
+                    <small class="form-text text-muted">Vui lòng nhập số điện thoại hợp lệ (10 chữ số)</small>
+                </div>
+
+                <!-- Địa Chỉ -->
+                <div class="col-md-6">
+                    <label for="DiaChi">Địa Chỉ <span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.DiaChi, new { @class = "form-control", placeholder = "Địa chỉ tự động cập nhật", rows = 3, required = "required" })
+                    @Html.ValidationMessageFor(m => m.DiaChi, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <!-- Tỉnh -->
+                <div class="col-md-3">
+                    <label for="Tinh">Tỉnh</label>
+                    <select id="Tinh" class="form-control">
+                        <option value="">Chọn Tỉnh</option>
+                        <option value="TPHCM">TP Hồ Chí Minh</option>
+                        <option value="HaNoi">Hà Nội</option>
+                        <option value="DaNang">Đà Nẵng</option>
+                        <!-- Thêm các tỉnh khác tại đây -->
+                    </select>
+                </div>
+
+                <!-- Huyện -->
+                <div class="col-md-3">
+                    <label for="Huyen">Huyện</label>
+                    <select id="Huyen" class="form-control">
+                        <option value="">Chọn Huyện</option>
+                        <option value="Quan1">Quận 1</option>
+                        <option value="Quan2">Quận 2</option>
+                        <option value="Quan3">Quận 3</option>
+                        <!-- Thêm các huyện khác tại đây -->
+                    </select>
+                </div>
+
+                <!-- Xã -->
+                <div class="col-md-3">
+                    <label for="Xa">Xã</label>
+                    <select id="Xa" class="form-control">
+                        <option value="">Chọn Xã</option>
+                        <option value="BenNge">Phường Bến Nghé</option>
+                        <option value="ThachMyLoi">Phường Thạnh Mỹ Lợi</option>
+                        <option value="VoThiSau">Phường Võ Thị Sáu</option>
+                        <!-- Thêm các xã khác tại đây -->
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="DiaChiCuThe">Địa Chỉ Cụ Thể</label>
+                    <input type="text" id="DiaChiCuThe" class="form-control" placeholder="Nhập địa chỉ cụ thể" />
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="TaiKhoan">Tài Khoản <span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.TaiKhoan, new { @class = "form-control", placeholder = "Nhập tài khoản", required = "required" })
+                    @Html.ValidationMessageFor(m => m.TaiKhoan, "", new { @class = "text-danger" })
+                </div>
+
+
+                <div class="col-md-6">
+                    <label for="MatKhau">Mật Khẩu <span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.MatKhau, new { @class = "form-control", placeholder = "Nhập mật khẩu", required = "required" })
+                    @Html.ValidationMessageFor(m => m.MatKhau, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+
+
+
+            <div class="d-flex justify-content-end mt-4">
+                <button type="submit" class="btn btn-primary px-4">Sửa Thông Tin</button>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        // Khi người dùng chọn Tỉnh, Huyện, Xã thì nối lại và điền vào trường Địa Chỉ
+        $('#Tinh, #Huyen, #Xa, #DiaChiCuThe').on('change', function () {
+            var tinh = $('#Tinh').val();
+            var huyen = $('#Huyen').val();
+            var xa = $('#Xa').val();
+            var diaChiCuThe = $('#DiaChiCuThe').val();  // Lấy địa chỉ cụ thể
+            var diaChi = '';
+
+            if (tinh) {
+                diaChi += tinh;
+            }
+            if (huyen) {
+                if (diaChi) diaChi += ', ';
+                diaChi += huyen;
+            }
+            if (xa) {
+                if (diaChi) diaChi += ', ';
+                diaChi += xa;
+            }
+
+            if (diaChiCuThe) {
+                if (diaChi) diaChi += ', ';
+                diaChi += diaChiCuThe;  // Nối địa chỉ cụ thể
+            }
+
+            $('#DiaChi').val(diaChi);  // Điền vào trường Địa Chỉ
+        });
+
+        // Nếu có thông tin địa chỉ sẵn, tự động điền vào Tỉnh, Huyện, Xã
+        var diaChi = '@Model.DiaChi';
+        if (diaChi) {
+            var diaChiParts = diaChi.split(', ');
+            if (diaChiParts.length >= 1) {
+                $('#Tinh').val(diaChiParts[0]);
+            }
+            if (diaChiParts.length >= 2) {
+                $('#Huyen').val(diaChiParts[1]);
+            }
+            if (diaChiParts.length >= 3) {
+                $('#Xa').val(diaChiParts[2]);
+            }
+        }
+    });
+</script>

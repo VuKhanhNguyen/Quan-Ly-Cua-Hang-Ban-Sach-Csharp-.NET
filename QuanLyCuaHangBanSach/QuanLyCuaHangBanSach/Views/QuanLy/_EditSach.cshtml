@@ -1,0 +1,127 @@
+﻿@model QuanLyCuaHangBanSach.Models.SACH
+
+@using (Html.BeginForm("SaveEditedSach", "Quanly", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card shadow" style="padding: 15px; margin-bottom: 20px;">
+        <div class="card-header bg-primary text-white">
+            <h5> Sửa Sách</h5>
+            <small class="text-white-50">Vui lòng điền thông tin cần thiết để sửa sách mới</small>
+        </div>
+
+
+        <div class="card-header" style="text-align: center;">
+            <label>ID Sách: @Model.IDSach</label>
+        </div>
+        <div class="card-body" style="font-size: 13px;">
+            @Html.HiddenFor(m => m.IDSach)
+
+            <div class="row g-3">
+                <!-- Cột 1: Tên Sách -->
+                <div class="col-md-6">
+                    <label for="TenSach">Tên Sách<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.TenSach, new { @class = "form-control", placeholder = "Nhập tên sách" })
+                </div>
+
+                <!-- Cột 2: Tác Giả -->
+                <div class="col-md-6 ">
+                    <label for="TacGia">Tác Giả<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.TacGia, new { @class = "form-control", placeholder = "Nhập tác giả" })
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <!-- Cột 1: Thể Loại -->
+                <div class="col-md-6">
+                    <label for="IDTheLoai">Thể Loại<span class="text-danger">*</span></label>
+                    @Html.DropDownListFor(
+                          m => m.IDTheLoai,
+                          new SelectList(ViewBag.TheLoaiList, "IDTheLoai", "TenTheLoai", Model.IDTheLoai), // Gán giá trị được chọn
+                          "Chọn thể loại",
+                          new { @class = "form-control" })
+                </div>
+
+                <!-- Cột 2: Nhà Xuất Bản -->
+                <div class="col-md-6">
+                    <label for="NhaXuatBan">Nhà Xuất Bản<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.NhaXuatBan, new { @class = "form-control", placeholder = "Nhập nhà xuất bản" })
+                </div>
+            </div>
+
+            <div class="row g-3">
+
+                <!-- Cột 1: Năm Xuất Bản -->
+                <div class="col-md-6">
+                    <label for="NamXuatBan">Năm Xuất Bản<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.NamXuatBan, new { @class = "form-control", placeholder = "Nhập năm xuất bản" })
+                </div>
+
+                <!-- Cột 2: Giá Nhập -->
+                <div class="col-md-6">
+                    <label for="GiaNhap">Giá Nhập<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.GiaNhap, new { @class = "form-control", placeholder = "Nhập giá nhập" })
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <!-- Cột 1: Giá Bán -->
+                <div class="col-md-6">
+                    <label for="GiaBan">Giá Bán<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.GiaBan, new { @class = "form-control", placeholder = "Nhập giá bán" })
+                </div>
+
+                <!-- Cột 2: Số Lượng Tồn -->
+                <div class="col-md-6">
+                    <label for="SoLuongTon">Số Lượng Tồn<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.SoLuongTon, new { @class = "form-control", placeholder = "Nhập số lượng tồn" })
+                </div>
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col-md-6">
+                    <label for="AnhSach">Hình Ảnh (URL)<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.AnhSach, new { @class = "form-control", placeholder = "Nhập URL hình ảnh", required = "required" })
+                    @Html.ValidationMessageFor(m => m.AnhSach, "", new { @class = "text-danger" })
+                    <p>
+                        Ảnh hiện tại:  <a href="javascript:void(0);" class="view-image" data-image-url="@Model.AnhSach" onclick="showImageModal('@Model.AnhSach')">Xem ảnh</a>
+                    </p>
+                </div>
+
+                <!-- Cột 2: Mô Tả -->
+                <div class="col-md-6">
+                    <label for="MoTa">Mô Tả<span class="text-danger">*</span></label>
+                    @Html.TextAreaFor(m => m.MoTa, new { @class = "form-control", placeholder = "Nhập mô tả sách" })
+                </div>
+            </div>
+
+            <!-- Nút Submit -->
+            <button type="submit" class="btn btn-primary" style="margin-bottom: 20px; font-size: 13px; float: right;">Sửa Sách</button>
+        </div>
+    </div>
+
+}
+<script>
+    function showImageModal(imageUrl) {
+        var modal = new bootstrap.Modal(document.getElementById('imageModal'));
+        document.getElementById('imageModalContent').src = imageUrl;
+        modal.show();
+    }
+</script>
+
+<!-- Modal to show image -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Xem Ảnh</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="imageModalContent" src="" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+</div>
+

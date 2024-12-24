@@ -1,0 +1,67 @@
+﻿@model QuanLyCuaHangBanSach.Models.vw_DonHangChiTiet
+
+@using (Html.BeginForm("SaveDH", "QuanLy", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="card shadow" style="padding: 15px; margin-bottom: 20px;">
+        <div class="card-header bg-primary text-white">
+            <h5>Thêm Đơn Hàng</h5>
+            <small class="text-white-50">Vui lòng điền thông tin cần thiết để thêm đơn hàng mới</small>
+        </div>
+        <div class="card-body" style="font-size: 14px;">
+            @* Hiển thị lỗi *@
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger">
+                    <strong>Lỗi:</strong> Vui lòng kiểm tra lại thông tin.
+                    <ul class="mb-0">
+                        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                        {
+                            <li>@error.ErrorMessage</li>
+                        }
+                    </ul>
+                </div>
+            }
+
+            <div class="row g-3">
+                <!-- ID Khách Hàng -->
+                <div class="col-md-6">
+                    <label for="IDKhachHang">Khách Hàng <span class="text-danger">*</span></label>
+                    @Html.DropDownListFor(m => m.IDKhachHang, (IEnumerable<SelectListItem>)ViewBag.KhachHangs, "Chọn Khách Hàng", new { @class = "form-control", required = "required" })
+                    @Html.ValidationMessageFor(m => m.IDKhachHang, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- ID Sách -->
+                <div class="col-md-6">
+                    <label for="IDSach">Sách <span class="text-danger">*</span></label>
+                    @Html.DropDownListFor(m => m.IDSach, new SelectList(ViewBag.Sachs, "IDSach", "TenSach"), "Chọn Sách", new { @class = "form-control", required = "required", id = "SachDropdown" })
+                    @Html.ValidationMessageFor(m => m.IDSach, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <!-- Số Lượng -->
+                <div class="col-md-6">
+                    <label for="SoLuong">Số Lượng <span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.SoLuong, new { @class = "form-control", placeholder = "Số lượng", required = "required", id = "SoLuong" })
+                    @Html.ValidationMessageFor(m => m.SoLuong, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Trạng Thái -->
+                <div class="col-md-6">
+                    <label for="TrangThai">Trạng Thái <span class="text-danger">*</span></label>
+                    @Html.DropDownListFor(m => m.TrangThai, new List<SelectListItem>
+                    {
+                        new SelectListItem { Text = "Chờ xử lý", Value = "Chờ xử lý" },
+                        new SelectListItem { Text = "Đã xử lý", Value = "Đã xử lý" }
+                    }, "Chọn Trạng Thái", new { @class = "form-control", required = "required" })
+                    @Html.ValidationMessageFor(m => m.TrangThai, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end mt-4">
+                <button type="submit" class="btn btn-primary px-4">Thêm Thông Tin</button>
+            </div>
+        </div>
+    </div>
+}

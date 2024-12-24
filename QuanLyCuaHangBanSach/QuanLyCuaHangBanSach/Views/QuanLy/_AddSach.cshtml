@@ -1,0 +1,125 @@
+﻿@model QuanLyCuaHangBanSach.Models.SACH
+
+@using (Html.BeginForm("SaveNewSach", "QuanLy", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="card shadow" style="padding: 15px; margin-bottom: 20px;">
+        <div class="card-header bg-primary text-white">
+            <h5> Thêm Sách</h5>
+            <small class="text-white-100">Vui lòng điền thông tin cần thiết để thêm sách mới</small>
+        </div>
+        <div class="card-body" style="font-size: 14px;">
+
+            <!-- Hiển thị lỗi chung -->
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger">
+                    <p>Vui lòng kiểm tra lại các thông tin sau:</p>
+                    <ul>
+                        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                        {
+                            <li>@error.ErrorMessage</li>
+                        }
+                    </ul>
+                </div>
+            }
+
+            <div class="row g-3">
+                <!-- Trường ID Sách -->
+                <div class="col-md-6">
+                    <label for="IDSach">ID Sách<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.IDSach, new { @class = "form-control", placeholder = "Nhập ID sách", required = "required" })
+                    @Html.ValidationMessageFor(m => m.IDSach, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Trường Tên Sách -->
+                <div class="col-md-6">
+                    <label for="TenSach">Tên Sách<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.TenSach, new { @class = "form-control", placeholder = "Nhập tên sách", required = "required" })
+                    @Html.ValidationMessageFor(m => m.TenSach, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <!-- Trường Tác Giả -->
+                <div class="col-md-6">
+                    <label for="TacGia">Tác Giả<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.TacGia, new { @class = "form-control", placeholder = "Nhập tác giả", required = "required" })
+                    @Html.ValidationMessageFor(m => m.TacGia, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Trường Thể Loại -->
+                <div class="col-md-6">
+                    <label for="IDTheLoai">Thể Loại<span class="text-danger">*</span></label>
+                    @Html.DropDownListFor(m => m.IDTheLoai,
+                        new SelectList(ViewBag.TheLoaiList, "IDTheLoai", "TenTheLoai"),
+                        "Chọn thể loại",
+                        new { @class = "form-control", required = "required" })
+                    @Html.ValidationMessageFor(m => m.IDTheLoai, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+
+            <div class="row g-3">
+                <!-- Trường Nhà Xuất Bản -->
+                <div class="col-md-6">
+                    <label for="NhaXuatBan">Nhà Xuất Bản<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.NhaXuatBan, new { @class = "form-control", placeholder = "Nhập nhà xuất bản", required = "required" })
+                    @Html.ValidationMessageFor(m => m.NhaXuatBan, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Trường Năm Xuất Bản -->
+                <div class="col-md-6">
+                    <label for="NamXuatBan">Năm Xuất Bản<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.NamXuatBan, new { @class = "form-control", placeholder = "Nhập năm xuất bản", required = "required", type = "number", min = "1900" })
+                    @Html.ValidationMessageFor(m => m.NamXuatBan, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <!-- Trường Giá Nhập -->
+                <div class="col-md-6">
+                    <label for="GiaNhap">Giá Nhập<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.GiaNhap, new { @class = "form-control", placeholder = "Nhập giá nhập", required = "required", type = "number", min = "0" })
+                    @Html.ValidationMessageFor(m => m.GiaNhap, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Trường Giá Bán -->
+                <div class="col-md-6">
+                    <label for="GiaBan">Giá Bán<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.GiaBan, new { @class = "form-control", placeholder = "Nhập giá bán", required = "required", type = "number", min = "0" })
+                    @Html.ValidationMessageFor(m => m.GiaBan, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <!-- Trường Số Lượng Tồn -->
+                <div class="col-md-6">
+                    <label for="SoLuongTon">Số Lượng Tồn<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.SoLuongTon, new { @class = "form-control", placeholder = "Nhập số lượng tồn", required = "required", type = "number", min = "0" })
+                    @Html.ValidationMessageFor(m => m.SoLuongTon, "", new { @class = "text-danger" })
+                </div>
+
+                <!-- Trường Hình Ảnh -->
+                <!-- Trường Hình Ảnh -->
+                <div class="col-md-6">
+                    <label for="AnhSach">Hình Ảnh (URL)<span class="text-danger">*</span></label>
+                    @Html.TextBoxFor(m => m.AnhSach, new { @class = "form-control", placeholder = "Nhập URL hình ảnh", required = "required" })
+                    @Html.ValidationMessageFor(m => m.AnhSach, "", new { @class = "text-danger" })
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <!-- Trường Mô Tả -->
+                <div class="col-md-12 mb-3">
+                    <label for="MoTa">Mô Tả<span class="text-danger">*</span></label>
+                    @Html.TextAreaFor(m => m.MoTa, new { @class = "form-control", placeholder = "Nhập mô tả sách", rows = 3 })
+                    @Html.ValidationMessageFor(m => m.MoTa, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-bottom: 20px; font-size: 12px; float: right;">Thêm Sách</button>
+        </div>
+    </div>
+}

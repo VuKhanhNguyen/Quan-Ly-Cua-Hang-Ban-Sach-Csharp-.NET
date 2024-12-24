@@ -1,0 +1,352 @@
+﻿
+
+@{
+    ViewBag.Title = "Quản lý";
+    var khachHangs = ViewBag.KhachHangs as List<QuanLyCuaHangBanSach.Models.KHACHHANG>;
+    var sachs = ViewBag.Sachs as List<QuanLyCuaHangBanSach.Models.SACH>;
+    var chitietdonHangs = ViewBag.ChiTietDonHangs as List<QuanLyCuaHangBanSach.Models.vw_DonHangChiTiet>;
+
+
+
+
+}
+<!-- Header -->
+<div class="container-fluid page-header py-4">
+    <h4 class="text-center text-white display-8">ADMIN QUẢN LÝ</h4>
+</div>
+
+<!-- Content -->
+<div class="container-fluid py-2">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3">
+            <div class="list-group">
+                <a href="javascript:void(0);" class="list-group-item list-group-item-action active" data-target="qlKhachHang" onclick="showContent('qlKhachHang')">Quản lý Khách Hàng</a>
+                <a href="javascript:void(0);" class="list-group-item list-group-item-action" data-target="qlSach" onclick="showContent('qlSach')">Quản lý Sách</a>
+                <a href="javascript:void(0);" class="list-group-item list-group-item-action" data-target="qlDonHang" onclick="showContent('qlDonHang')">Quản lý Đơn Hàng</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="col-lg-9">
+
+
+
+            <div id="qlKhachHang" class="content-section">
+
+                <div id="customerFormContent"></div>
+
+
+                <!-- Hiển thị bảng khách hàng -->
+                <div class="card" style="padding:5px">
+                    <div class="card-header">
+                        <h3>Danh Sách Khách Hàng</h3>
+                        <!-- Nút Thêm -->
+                        <a href="javascript:void(0);" class="btn btn-success btn-sm" onclick="showForm('add')" style="float: right; font-size: 13px;">
+                            Thêm Khách Hàng
+                        </a>
+                    </div>
+
+
+                    <div style="overflow: auto;padding:10px;font-size:13px;">
+                        <table class="table table-bordered " style="text-align:center">
+                            <thead>
+                                <tr style="min-width:250px;">
+                                    <th style="min-width:60px">ID KH</th>
+                                    <th style="min-width:110px">Họ và Tên</th>
+                                    <th style="min-width:110px">Email</th>
+                                    <th>Số DT</th>
+                                    <th style="min-width:250px">Địa Chỉ</th>
+                                    <th>Tài Khoản</th>
+                                    <th>Mật Khẩu</th>
+                                    <th>Táp Vụ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var kh in khachHangs)
+                                {
+                                    <tr>
+                                        <td style="text-align:center">
+                                            @kh.IDKhachHang
+                                        </td>
+                                        <td>@kh.HoTen</td>
+                                        <td>@kh.Email</td>
+                                        <td>@kh.SoDienThoai</td>
+                                        <td>@kh.DiaChi</td>
+                                        <td>@kh.TaiKhoan</td>
+                                        <td>@kh.MatKhau</td>
+                                        <td class="d-flex gap-2 justify-content-center align-items-center">
+                                            @using (Html.BeginForm("DeleteKH", "Quanly", FormMethod.Post, new { @class = "d-inline" }))
+                                            {
+                                                @Html.Hidden("id", kh.IDKhachHang)
+                                                <button style="min-width: 50px;" type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa khách hàng này không?')">
+                                                    Xóa
+                                                </button>
+                                            }
+
+                                            <!-- Nút Sửa -->
+                                            <a href="javascript:void(0);" class="btn btn-warning btn-sm" style="min-width: 50px;" onclick="showForm('edit', @kh.IDKhachHang)">
+                                                Sửa
+                                            </a>
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quản lý Sách -->
+            <div id="qlSach" class="content-section" style="display:none">
+
+                <div id="bookFormContent"></div>
+
+
+
+                <div class="card" style="padding:5px">
+                    <div class="card-header">
+                        <h3>Danh Sách Sách</h3>
+                        <a href="javascript:void(0);" class="btn btn-success btn-sm" onclick="showBookForm('add')" style="float: right; font-size: 13px;">
+                            Thêm Sách
+                        </a>
+                    </div>
+
+
+
+                    <div style="overflow: auto;padding:10px;font-size:13px;">
+                        <table class="table table-bordered" style="text-align:center">
+                            <thead>
+                                <tr>
+                                    <th style="min-width:100px;">ID Sách</th>
+                                    <th style="min-width:150px;">Tên Sách</th>
+                                    <th style="min-width:100px;">Tác Giả</th>
+                                    <th style="min-width:80px;">Thể Loại</th>
+                                    <th style="min-width:150px;">Nhà Xuất Bản</th>
+                                    <th style="min-width:100px;">Năm XB</th>
+                                    <th style="min-width:100px;">Giá Nhập</th>
+                                    <th style="min-width:100px;">Giá Bán</th>
+                                    <th style="min-width:150px;">Số Lượng Tồn</th>
+                                    <th style="min-width:100px;">Link Ảnh</th>
+                                    <th style="min-width:400px;">Mô Tả</th>
+                                    <th style="min-width:80px;">Tác Vụ</th>
+                                </tr>
+                            </thead>
+                            <tbody id="booksTableBody">
+                                @foreach (var s in sachs)
+                                {
+                                    <tr data-category="@s.IDTheLoai">
+                                        <!-- Thêm thuộc tính data-category với giá trị là ID thể loại -->
+                                        <td>@s.IDSach</td>
+                                        <td>@s.TenSach</td>
+                                        <td>@s.TacGia</td>
+                                        <td>@s.IDTheLoai</td>
+                                        <td>@s.NhaXuatBan</td>
+                                        <td>@s.NamXuatBan</td>
+                                        <td>@s.GiaNhap</td>
+                                        <td>@s.GiaBan</td>
+                                        <td>@s.SoLuongTon</td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="view-image" data-image-url="@s.AnhSach" onclick="showImageModal('@s.AnhSach')">Xem ảnh</a>
+                                        </td>
+                                        <td>@s.MoTa</td>
+                                        <td class="d-flex gap-2 justify-content-center align-items-center">
+                                            <a href="javascript:void(0);" class="btn btn-warning btn-sm" onclick="showBookForm('edit', '@s.IDSach', event)" style="min-width: 50px;">Sửa</a>
+                                            @using (Html.BeginForm("DeleteSach", "Quanly", FormMethod.Post))
+                                            {
+                                                @Html.Hidden("id", s.IDSach)
+                                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa sách này không?')" style="min-width: 50px;">Xóa</button>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <!-- Phần hiển thị ảnh -->
+
+
+                </div>
+
+            </div>
+
+
+
+            <div id="qlDonHang" class="content-section" style="display:none">
+                <div id="donhangFormContent"></div> <!-- Vùng hiển thị form -->
+
+
+
+                <div class="card" style="padding:5px">
+                    <div class="card-header">
+                        <h3>Danh Sách Hóa Đơn</h3>
+                        <a href="javascript:void(0);" class="btn btn-success btn-sm" onclick="showdonhangForm('add')" style="float: right; font-size: 13px;">
+                            Thêm Đơn Hàng
+                        </a>
+                    </div>
+
+
+                    <div style="overflow: auto;padding:10px;font-size:13px;">
+                        <table class="table table-bordered" style="text-align:center">
+                            <thead>
+                                <tr>
+                                    <th style="min-width:100px;">ID Đơn Hàng</th>
+                                    <th style="min-width:150px;">Khách Hàng</th>
+                                    <th style="min-width:150px;">ID Sách</th>
+                                    <th style="min-width:150px;">Số Lượng</th>
+                                    <th style="min-width:120px;">Ngày Đặt Hàng</th>
+                                    <th style="min-width:150px;">Đơn Giá</th>
+                                    <th style="min-width:80px;">Tổng Tiền </th>
+                                    <th style="min-width:150px;">Trang Thái</th>
+                                    <th style="min-width:80px;">Tác Vụ</th>
+
+                                </tr>
+                            </thead>
+                            @foreach (var dh in chitietdonHangs)
+                            {
+                                <tr>
+                                    <td style="text-align:center">
+                                        @dh.IDDonHang
+                                    </td>
+                                    <td>@dh.HoTen</td>
+                                    <td>@dh.IDSach</td>
+                                    <td>@dh.SoLuong</td>
+                                    <td>@dh.NgayDatHang</td>
+                                    <td>@dh.DonGia</td>
+                                    <td>@dh.TongTien</td>
+                                    <td>@dh.TrangThai</td>
+                                    <td class="d-flex gap-2 justify-content-center align-items-center">
+                                        @using (Html.BeginForm("DeleteDH", "Quanly", FormMethod.Post, new { @class = "d-inline" }))
+                                        {
+                                            @Html.Hidden("id", dh.IDDonHang)
+                                            <button style="min-width: 50px;" type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa khách hàng này không?')">
+                                                Xóa
+                                            </button>
+                                        }
+
+                                        <!-- Nút Sửa -->
+                                        <a href="javascript:void(0);" class="btn btn-warning btn-sm" style="min-width: 50px;" onclick="showdonhangForm('edit', @dh.IDDonHang)">
+                                            Sửa
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    // Hàm để hiển thị form thêm hoặc sửa
+    function showForm(action, id = null) {
+        event.preventDefault(); // Ngừng hành động mặc định của thẻ <a>
+
+        var url = action === 'add' ? '@Url.Action("AddKH", "Quanly")' : '@Url.Action("EditKH", "Quanly")/' + id;
+
+        // Thực hiện AJAX call để lấy form và hiển thị
+        $.get(url, function(data) {
+            // Ẩn form hiện tại
+            $('#customerFormContainer').hide();
+
+            // Cập nhật form mới vào container
+            $('#customerFormContent').html(data);
+
+            // Hiển thị form mới
+            $('#customerFormContainer').show();
+        });
+    }
+
+
+    // Hàm để hiển thị form thêm hoặc sửa sách
+function showBookForm(action, id = null) {
+    event.preventDefault(); // Ngừng hành động mặc định của thẻ <a>
+
+    // Tạo URL cho action tương ứng
+    var url = action === 'add' ? '@Url.Action("AddSach", "Quanly")' : '@Url.Action("EditSach", "Quanly")/' + id;
+
+    // Thực hiện AJAX call để lấy form và hiển thị
+    $.get(url, function (data) {
+        $('#bookFormContainer').hide(); // Ẩn form hiện tại (nếu cần)
+        $('#bookFormContent').html(data); // Cập nhật form mới
+        $('#bookFormContainer').show(); // Hiển thị form
+    });
+    }
+
+
+
+ function showdonhangForm(action, id = null) {
+    event.preventDefault(); // Ngừng hành động mặc định của thẻ <a>
+
+    // Tạo URL cho action tương ứng
+    var url = action === 'add' ? '@Url.Action("AddDH", "Quanly")' : '@Url.Action("EditDH", "Quanly")/' + id;
+
+    // Thực hiện AJAX call để lấy form và hiển thị
+    $.get(url, function (data) {
+        $('#donhangFormContainer').hide(); // Ẩn form hiện tại (nếu có)
+        $('#donhangFormContent').html(data); // Cập nhật form mới
+$('#donhangFormContainer').show(); // Hiển thị form
+    });
+}
+
+
+
+
+
+    function showContent(target) {
+        console.log('showContent called for ' + target); // Kiểm tra xem hàm có được gọi không
+
+        // Ẩn tất cả các phần nội dung
+        $('.content-section').hide();
+
+        // Hiển thị phần nội dung tương ứng
+        $('#' + target).show();
+
+        // Đặt trạng thái "active" cho liên kết
+        $('.list-group-item').removeClass('active');
+        $('[data-target="' + target + '"]').addClass('active');
+    }
+
+
+
+
+
+
+    //lọc sách
+
+
+
+
+
+
+</script>
+<script>
+    function showImageModal(imageUrl) {
+        var modal = new bootstrap.Modal(document.getElementById('imageModal'));
+        document.getElementById('imageModalContent').src = imageUrl;
+        modal.show();
+    }
+</script>
+
+<!-- Modal to show image -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Xem Ảnh</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="imageModalContent" src="" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+</div>

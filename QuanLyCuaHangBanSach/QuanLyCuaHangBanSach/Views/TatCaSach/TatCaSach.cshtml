@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "TatCaSach";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<QuanLyCuaHangBanSach.Models.SACH>
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Cửa hàng</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="/Home/Index">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="#">Trang</a></li>
+        <li class="breadcrumb-item active text-white">Tất cả sách</li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+
+<div class="container-fluid py-5 mb-5 hero-header">
+    <div class="container-fluid fruite py-5">
+        <div class="container py-5">
+            @*<div class="input-group w-100 mx-auto d-flex" style="margin-bottom: 20px">
+            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+            <span for="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+        </div>*@
+            <form method="get" action="@Url.Action("TatCaSach", "TatCaSach")">
+                <div class="input-group w-100 mx-auto d-flex" style="margin-bottom: 20px">
+                    <input type="search" name="search" value="@ViewBag.Search" class="form-control p-3" placeholder="Nhập tên sách hoặc tác giả...">
+                    <button type="submit" class="btn btn-primary p-3"><i class="fa fa-search"></i> Tìm kiếm</button>
+                </div>
+            </form>
+            <div class="tab-class text-center">
+                <div class="col-xl-3">
+
+                </div>
+                <div class="tab-content">
+                    @*<div class="row g-4">
+
+            @foreach (var sach in Model)
+            {
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="rounded position-relative fruite-item">
+                        <div class="fruite-img">
+                            <img src="@sach.AnhSach" class="img-fluid w-100 rounded-top" alt="@sach.TenSach">
+                        </div>
+                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                            <h4>
+                                <a href="@Url.Action("ChiTietSach", "ChiTietSach", new { id = sach.IDSach })" target="_blank">
+                                    @sach.TenSach
+                                </a>
+                            </h4>
+                            <div class="d-flex justify-content-between flex-lg-wrap">
+                                <p class="text-dark fs-5 fw-bold mb-0">@String.Format("{0:0,0} đồng", sach.GiaBan)</p>
+                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary">
+                                    <i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm vào giỏ hàng
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>*@
+                    <div class="row g-4">
+                        @if (!Model.Any())
+                        {
+                            <p class="text-center fs-4">Không có sách nào được tìm thấy.</p>
+                        }
+                        else
+                        {
+                            foreach (var sach in Model)
+                            {
+                                <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="rounded position-relative fruite-item">
+                                        <div class="fruite-img">
+                                            <img src="@sach.AnhSach" class="img-fluid w-100 rounded-top" alt="@sach.TenSach">
+                                        </div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                            <h4>
+                                                <a href="@Url.Action("ChiTietSach", "ChiTietSach", new { id = sach.IDSach })" target="_blank">
+                                                    @sach.TenSach
+                                                </a>
+                                            </h4>
+                                            <p class="text-dark fs-5 fw-bold mb-0">@String.Format("{0:0,0} đồng", sach.GiaBan)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

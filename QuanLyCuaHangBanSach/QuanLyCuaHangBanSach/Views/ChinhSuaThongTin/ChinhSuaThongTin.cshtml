@@ -1,0 +1,111 @@
+﻿@model QuanLyCuaHangBanSach.Models.KHACHHANG
+@{
+    ViewBag.Title = "ChinhSuaThongTin";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh sửa thông tin người dùng</title>
+    <link rel="stylesheet" href="~/css/user.css">
+    <style>
+        body {
+            background-image: url(https://drsw10gc90t0z.cloudfront.net/AcuCustom/Sitename/DAM/483/Housmans_Bookshop.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: inherit;
+                filter: blur(8px);
+                z-index: -1;
+            }
+
+        .container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-edit {
+           
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+
+            .btn-edit:hover {
+                background-color: #0056b3;
+            }
+
+        .input-field {
+            width: 96%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+            
+        }
+
+        .user-info p {
+            margin: 5px 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body style="background-image: url(https://drsw10gc90t0z.cloudfront.net/AcuCustom/Sitename/DAM/483/Housmans_Bookshop.jpg);">
+    <section>
+        <div class="container">
+            <h1>Chỉnh sửa thông tin</h1>
+            @using (Html.BeginForm("LuuThongTin", "ChinhSuaThongTin", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <div class="user-info">
+                    <p>
+                        <label>Họ và tên:</label>
+                        @Html.TextBoxFor(m => m.HoTen, new { @class = "input-field" })
+                    </p><br>
+                    <p>
+                        <label>Email:</label>
+                        @Html.TextBoxFor(m => m.Email, new { @class = "input-field" })
+                    </p><br>
+                    <p>
+                        <label>Số điện thoại:</label>
+                        @Html.TextBoxFor(m => m.SoDienThoai, new { @class = "input-field" })
+                    </p><br>
+                    <p>
+                        <label>Địa chỉ:</label>
+                        @Html.TextBoxFor(m => m.DiaChi, new { @class = "input-field" })
+                    </p><br>
+                </div>
+                <button type="submit" class="btn-edit">Lưu thay đổi</button>
+                <button type="button" class="btn-edit" onclick="window.location.href='@Url.Action("User", "User")'">Quay lại</button>
+            }
+        </div>
+    </section>
+</body>
+</html>
